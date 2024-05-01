@@ -1,6 +1,17 @@
 <html>
 <body>
 
-  hello wolrd
+  <script>
+
+    let iOSiPadOS = /^iP/.test(navigator.platform) ||
+           /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
+
+    if(iOSiPadOS)
+      window.location.href = 'microsoft-edge:' + window.location.hash.substr(1)
+    else
+      window.location.href = 'microsoft-edge:' + 'https://' + window.location.hash.substr(1)
+
+    
+  </script>
 </body>
 </html>
