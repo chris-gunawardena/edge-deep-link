@@ -3,6 +3,9 @@
   <h2>Please open in edge</h2>
   <script>
 
+
+setTimeout(() => {
+
     let iOSiPadOS = /^iP/.test(navigator.platform) ||
            /^Mac/.test(navigator.platform) && navigator.maxTouchPoints > 4;
 
@@ -10,6 +13,11 @@
       window.location.href = 'microsoft-edge:' + window.location.hash.substr(1)
     else
       window.location.href = 'microsoft-edge:' + 'https://' + window.location.hash.substr(1)
+
+  
+}, 5000);
+
+    
 
     
   </script>
